@@ -9,7 +9,7 @@ declare global {
   interface Window {
     emailjs: {
       init: (publicKey: string) => void;
-      send: (serviceId: string, templateId: string, templateParams: any) => Promise<any>;
+      send: (serviceId: string, templateId: string, templateParams: Record<string, string>) => Promise<{ status: number; text: string }>;
     };
   }
 }
@@ -26,7 +26,12 @@ const Contact = () => {
   const [rocketLaunched, setRocketLaunched] = useState(false);
 
   // Generate background particles only on client side to avoid hydration mismatch
-  const [backgroundParticles, setBackgroundParticles] = useState([]);
+  const [backgroundParticles, setBackgroundParticles] = useState<Array<{
+    left: number;
+    top: number;
+    duration: number;
+    delay: number;
+  }>>([]);
 
   // Initialize EmailJS
   useEffect(() => {
@@ -136,7 +141,7 @@ const Contact = () => {
       rotate: 45,
       transition: {
         duration: 2,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };

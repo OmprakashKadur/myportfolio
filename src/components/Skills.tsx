@@ -84,7 +84,7 @@ const Skills = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 rounded-3xl blur-2xl" />
 
         <div className="relative flex items-center justify-center flex-wrap gap-12 py-16 px-8">
-          {filteredSkills.slice(0, 3).map((skill, index) => (
+          {filteredSkills.slice(0, 3).map((skill) => (
             <div key={skill.name} className="flex flex-col items-center group">
               {/* Skill orb with enhanced styling */}
               <div className="relative mb-6">

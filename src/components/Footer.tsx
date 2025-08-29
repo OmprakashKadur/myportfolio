@@ -1,13 +1,18 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Twitter, Heart, Code, Coffee } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Code, Coffee } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(2024);
   // Generate random particle properties only on client side to avoid hydration mismatch
-  const [particleProperties, setParticleProperties] = useState([]);
+  const [particleProperties, setParticleProperties] = useState<Array<{
+    left: number;
+    top: number;
+    duration: number;
+    delay: number;
+  }>>([]);
 
   useEffect(() => {
     // Set current year and generate particle properties only after component mounts on client

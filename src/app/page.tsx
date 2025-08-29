@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ParticleBackground from "@/components/ParticleBackground";
 import Loading from "@/components/Loading";
-import ThemeToggle from "@/components/ThemeToggle";
+// import ThemeToggle from "@/components/ThemeToggle";
 import ScrollProgress from "@/components/ScrollProgress";
 import Footer from "@/components/Footer";
 
@@ -22,7 +22,7 @@ const sectionVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" as const }
   }
 };
 
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       {/* Theme Toggle */}
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
 
       {/* Scroll Progress */}
       <ScrollProgress />

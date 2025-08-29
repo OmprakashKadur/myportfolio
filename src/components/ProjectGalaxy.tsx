@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, ExternalLink, Github, Star } from 'lucide-react';
 import projectsData from '@/data/projects.json';
@@ -30,14 +30,9 @@ interface Project {
 
 const ProjectGalaxy = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
-  };
-
-  const handleProjectHover = (project: Project | null) => {
-    setHoveredProject(project);
   };
 
   return (
@@ -93,8 +88,7 @@ const ProjectGalaxy = () => {
               <motion.div
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 h-full transition-all duration-300 hover:scale-105 hover:bg-slate-800/70 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer"
                 whileHover={{ y: -10 }}
-                onHoverStart={() => handleProjectHover(project)}
-                onHoverEnd={() => handleProjectHover(null)}
+
                 onClick={() => handleProjectClick(project)}
               >
                 {/* Featured Badge */}

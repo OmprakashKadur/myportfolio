@@ -44,7 +44,7 @@ const Navigation = () => {
   }, [navItems]);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
+    const element = document.querySelector(href) as HTMLElement;
     if (element) {
       const elementPosition = element.offsetTop;
       const offsetPosition = elementPosition - 80; // Account for fixed nav height

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "senior-frontend-developer-module-lead",
+    "company": "Invendis Technologies India Pvt Ltd",
+    "position": "Senior Frontend Developer and Module Lead",
+    "duration": "2025 - Present",
+    "location": "Bangalore, India",
+    "type": "Full-time",
+    "description": "Leading frontend development initiatives and mentoring junior developers. Architected scalable React applications serving 100K+ users.",
+    "responsibilities": [
+      "Architected and developed high-performance React applications using Next.js and TypeScript",
+      "Led a team of 4 developers in delivering complex web applications",
+      "Implemented advanced state management solutions using Redux Toolkit and Zustand",
+      "Optimized application performance resulting in 40% faster load times",
+      "Established coding standards and best practices across the frontend team",
+      "Collaborated with UX/UI designers to implement pixel-perfect responsive designs"
+    ],
+    "achievements": [
+      "Reduced bundle size by 35% through code splitting and lazy loading",
+      "Improved Lighthouse performance scores from 65 to 95+",
+      "Successfully migrated legacy codebase to modern React patterns"
+    ],
+    "technologies": ["React", "Next.js", "TypeScript", "Redux", "TailwindCSS", "Jest"],
+    "featured": true
+  },
+  {
+    "id": "frontend-developer",
+    "company": "Invendis Technologies India Pvt Ltd",
+    "position": "Frontend Developer",
+    "duration": "2022 - 2024",
+    "location": "Bengaluru, India",
+    "type": "Full-time",
+    "description": "Developed and maintained multiple client-facing web applications with focus on user experience and performance optimization.",
+    "responsibilities": [
+      "Developed responsive web applications using React and modern JavaScript",
+      "Integrated RESTful APIs endpoints for dynamic data fetching",
+      "Implemented comprehensive testing strategies with unit and integration tests",
+      "Collaborated with backend developers to optimize API performance",
+      "Participated in agile development processes and sprint planning",
+      "Contributed to open-source projects and internal component libraries"
+    ],
+    "achievements": [
+      "Delivered 15+ projects on time with zero critical bugs",
+      "Created reusable component library used across 4+ projects",
+      "Mentored 2 junior developers and improved team productivity by 25%"
+    ],
+    "technologies": ["React", "JavaScript", "CSS3", "SASS", "Webpack", "Jest", "Git"],
+    "featured": true
+  }
+]

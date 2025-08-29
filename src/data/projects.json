@@ -1,0 +1,42 @@
+[
+  {
+    "id": "devlense",
+    "title": "Devlense - GitHub Profile Finder",
+    "stack": ["React", "TypeScript", "GitHub API", "TailwindCSS"],
+    "description": "A powerful GitHub profile finder that allows users to search and explore developer profiles by username, skills, and activity. Features include profile analytics, repository insights, and contribution tracking.",
+    "link": "https://github.com/omprakashkadur/devlens",
+    "liveLink": "https://devlense.vercel.app",
+    "image": "/projects/devlense.png",
+    "featured": true
+  },
+  {
+    "id": "pizgoria",
+    "title": "Pizgoria - Telecom Tower Monitoring",
+    "stack": ["React.js","Redux", "MySQL", "AG-Grid", "Chart.js","TailwindCSS"],
+    "description": "Comprehensive telecom tower monitoring system with real-time data visualization, alert management, and predictive maintenance features. Built for telecom companies to monitor tower health and performance.",
+    "link": "https://github.com/omprakashkadur/pizgoria",
+    "liveLink": "https://pizgoria-demo.vercel.app",
+    "image": "/projects/pizgoria.png",
+    "featured": true
+  },
+  {
+    "id": "isol",
+    "title": "Isol - Solar Monitoring System",
+    "stack": ["React.js", "TypeScript", "AG-Grid", "HighCharts", "BootStrap"],
+    "description": "Advanced solar panel monitoring platform with real-time energy production tracking, performance analytics, and automated maintenance scheduling. Designed for solar farm operators and homeowners.",
+    "link": "https://github.com/omprakashkadur/isol",
+    "liveLink": "https://isol-monitoring.vercel.app",
+    "image": "/projects/isol.png",
+    "featured": true
+  },
+  {
+    "id": "techtalkswithomee",
+    "title": "TechTalksWithOmee - Blog",
+    "stack": ["Next.js",  "TypeScript", "TailwindCSS"],
+    "description": "Modern blog platform built with Next.js and Sanity CMS, featuring markdown support, SEO optimization, and responsive design. A space for sharing technical insights and tutorials.",
+    "link": "https://github.com/omprakashkadur/techtalkswithomee",
+    "liveLink": "https://techtalkswithomee.com",
+    "image": "/projects/techtalks.png",
+    "featured": true
+  }
+]

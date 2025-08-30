@@ -275,7 +275,7 @@ const Skills = () => {
                 <span className="text-lg">{category.icon}</span>
                 <span className="font-medium">{category.name}</span>
                 {selectedCategory === category.name && (
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
                 )}
               </div>
 

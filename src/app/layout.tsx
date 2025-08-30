@@ -72,10 +72,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark" data-theme="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="color-scheme" content="dark" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Force dark theme
+              document.documentElement.classList.add('dark');
+              document.documentElement.style.colorScheme = 'dark';
+              // Prevent theme switching
+              Object.defineProperty(document.documentElement, 'className', {
+                get: function() { return this.getAttribute('class') || ''; },
+                set: function(value) { 
+                  const newValue = value.includes('dark') ? value : value + ' dark';
+                  this.setAttribute('class', newValue);
+                }
+              });
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

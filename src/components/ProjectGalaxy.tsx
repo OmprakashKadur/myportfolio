@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, ExternalLink, Github, Star } from 'lucide-react';
 import projectsData from '@/data/projects.json';
@@ -30,10 +30,55 @@ interface Project {
 
 const ProjectGalaxy = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
   };
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <section id="projects" className="relative py-20 overflow-hidden" style={{ scrollMarginTop: '80px' }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full px-6 py-2 mb-6">
+              <span className="text-blue-400">🚀</span>
+              <span className="text-blue-300 font-medium">Project Galaxy</span>
+              <span className="text-purple-400">✨</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Explore My Universe of
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"> Projects</span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Each project is a unique world waiting to be discovered. Hover to explore and click to dive deeper into the code and live demos.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Loading skeleton */}
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 h-64 animate-pulse">
+                <div className="h-4 bg-slate-700 rounded mb-4"></div>
+                <div className="h-3 bg-slate-700 rounded mb-2"></div>
+                <div className="h-3 bg-slate-700 rounded mb-4"></div>
+                <div className="flex gap-2 mb-4">
+                  <div className="h-6 bg-slate-700 rounded-full w-16"></div>
+                  <div className="h-6 bg-slate-700 rounded-full w-20"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="projects" className="relative py-20 overflow-hidden" style={{ scrollMarginTop: '80px' }}>
@@ -76,7 +121,7 @@ const ProjectGalaxy = () => {
         >
           {(projectsData as Project[]).map((project, index) => (
             <motion.div
-              key={project.id}
+              key={`${project.id}-${index}`}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -124,9 +169,9 @@ const ProjectGalaxy = () => {
                 {/* Tech Stack */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
-                    {project.stack.slice(0, 4).map((tech) => (
+                    {project.stack.slice(0, 4).map((tech, techIndex) => (
                       <span
-                        key={tech}
+                        key={`${project.id}-tech-${techIndex}`}
                         className="text-xs bg-gradient-to-r from-slate-700/80 to-slate-600/80 text-slate-200 px-3 py-1 rounded-full border border-slate-500/50 font-medium"
                       >
                         {tech}
@@ -265,9 +310,9 @@ const ProjectGalaxy = () => {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Technologies Used</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.stack.map((tech) => (
+                  {selectedProject.stack.map((tech, techIndex) => (
                     <span
-                      key={tech}
+                      key={`modal-${selectedProject.id}-tech-${techIndex}`}
                       className="bg-gradient-to-r from-slate-700 to-slate-600 text-slate-200 px-3 py-1 rounded-full border border-slate-500/50 font-medium"
                     >
                       {tech}

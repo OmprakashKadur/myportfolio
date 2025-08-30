@@ -5,9 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Briefcase, User, Code, Mail } from 'lucide-react';
 
 const Navigation = () => {
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = useMemo(() => [
     { id: 'home', label: 'Home', icon: Home, href: '#home' },
@@ -56,6 +61,33 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800"
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="text-xl font-bold text-white">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                OKM
+              </span>
+            </div>
+            <div className="hidden md:flex items-center space-x-1">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div key={index} className="w-16 h-8 bg-slate-700 rounded animate-pulse"></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.nav>
+    );
+  }
 
   return (
     <>

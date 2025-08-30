@@ -15,6 +15,7 @@ declare global {
 }
 
 const Contact = () => {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,6 +33,10 @@ const Contact = () => {
     duration: number;
     delay: number;
   }>>([]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Initialize EmailJS
   useEffect(() => {
@@ -94,6 +99,36 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <section id="contact" className="relative py-20 overflow-hidden" style={{ scrollMarginTop: '80px' }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Let&apos;s <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Connect</span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Ready to bring your ideas to life? Let&apos;s discuss your project and explore how we can work together.
+            </p>
+          </div>
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 max-w-4xl mx-auto animate-pulse">
+            <div className="h-8 bg-slate-700 rounded mb-4"></div>
+            <div className="h-4 bg-slate-700 rounded mb-2"></div>
+            <div className="h-4 bg-slate-700 rounded mb-6"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="h-12 bg-slate-700 rounded"></div>
+              <div className="h-12 bg-slate-700 rounded"></div>
+            </div>
+            <div className="h-32 bg-slate-700 rounded mb-6"></div>
+            <div className="h-12 bg-slate-700 rounded w-32 mx-auto"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -321,7 +356,7 @@ const Contact = () => {
               <div className="space-y-4 text-slate-300">
                 <p className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  omprakash@example.com
+                  kaduromee@gmail.com
                 </p>
                 <p className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-green-400" />

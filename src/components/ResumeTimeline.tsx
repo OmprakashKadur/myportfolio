@@ -235,7 +235,7 @@ const ResumeTimeline = () => {
             <div className="text-slate-300">Technologies Mastered</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-400 mb-2">4</div>
+            <div className="text-3xl font-bold text-green-400 mb-2">1</div>
             <div className="text-slate-300">Companies Worked</div>
           </div>
         </motion.div>

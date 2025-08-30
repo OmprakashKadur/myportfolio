@@ -76,7 +76,7 @@ const ScrollProgress = () => {
       </motion.button>
 
       {/* Reading progress indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -95,7 +95,7 @@ const ScrollProgress = () => {
             </motion.span>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 };

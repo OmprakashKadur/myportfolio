@@ -364,7 +364,7 @@ const Skills = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative bg-slate-800/60 backdrop-blur-sm border border-slate-600/50 rounded-xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300">
                 <div className="text-3xl font-bold text-blue-400 mb-2">
-                  {selectedCategory === 'All' ? '12+' : filteredSkills.length}
+                  {selectedCategory === 'All' ? '10+' : filteredSkills.length}
                 </div>
                 <div className="text-slate-300 text-sm font-medium">
                   {selectedCategory === 'All' ? 'Core Technologies' : `${selectedCategory} Skills`}

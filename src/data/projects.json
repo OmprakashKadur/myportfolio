@@ -1,13 +1,37 @@
 [{
-  "id": "myportfolio",
-  "title": "MyPortfolio - Interactive Developer Portfolio",
-  "stack": ["Next.js 15", "React 19", "TypeScript", "TailwindCSS 4", "Framer Motion", "Three.js (drei)", "Lucide React"],
-  "description": "A modern and interactive developer portfolio built with Next.js 15 and React 19, featuring smooth animations, 3D visuals, and a clean, responsive UI. Designed with TailwindCSS 4 for scalability and Framer Motion for engaging transitions. Includes SEO optimization, performance tuning, and showcases key projects with style.",
-  "link": "https://github.com/OmprakashKadur/myportfolio",
-  "liveLink": "https://omprakashkm-portfolio.vercel.app",
-  "image": "/projects/myportfolio.png",
+  "id": "spokenflow",
+  "title": "Spoken Flow - English Speaking Practice App",
+  "stack": [
+    "Next.js 15",
+    "React 19",
+    "TypeScript",
+    "TailwindCSS 4",
+    "Lucide React"
+  ],
+  "description": "Spoken Flow is a personal English learning and speaking practice app. It helps users improve fluency through categorized practice modules like public speaking, interviews, meetings, office conversations, and daily use. All learning data is stored in JSON files, ensuring simplicity and scalability. Features include auto-scrolling sentences with adjustable speed and font size, vocabulary flashcards, full-length conversations, and an integrated recording panel for speaking practice with preview, download, and discard options. Progress is tracked locally with marked items and pagination support.",
+  "link": "https://github.com/OmprakashKadur/spoken-flow",
+  "liveLink": "https://spoken-flow.vercel.app/",
+  "image": "/projects/spokenflow.png",
   "featured": true
 },
+  {
+    "id": "myportfolio",
+    "title": "MyPortfolio - Interactive Developer Portfolio",
+    "stack": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "TailwindCSS 4",
+      "Framer Motion",
+      "Three.js (drei)",
+      "Lucide React"
+    ],
+    "description": "A modern and interactive developer portfolio built with Next.js 15 and React 19, featuring smooth animations, 3D visuals, and a clean, responsive UI. Designed with TailwindCSS 4 for scalability and Framer Motion for engaging transitions. Includes SEO optimization, performance tuning, and showcases key projects with style.",
+    "link": "https://github.com/OmprakashKadur/myportfolio",
+    "liveLink": "https://omprakashkm-portfolio.vercel.app",
+    "image": "/projects/myportfolio.png",
+    "featured": true
+  },
   {
     "id": "devlense",
     "title": "Devlense - GitHub Profile Finder",
@@ -21,12 +45,19 @@
   {
     "id": "pizgoria",
     "title": "Pizgoria - Telecom Tower Monitoring",
-    "stack": ["React.js","Redux", "MySQL", "AG-Grid", "Chart.js","TailwindCSS"],
+    "stack": [
+      "React.js",
+      "Redux",
+      "MySQL",
+      "AG-Grid",
+      "Chart.js",
+      "TailwindCSS"
+    ],
     "description": "Comprehensive telecom tower monitoring system with real-time data visualization, alert management, and predictive maintenance features. Built for telecom companies to monitor tower health and performance.",
     "link": "",
     "liveLink": "",
     "image": "/projects/pizgoria.png",
-    "featured": true
+    "featured": false
   },
   {
     "id": "isol",
@@ -36,16 +67,6 @@
     "link": "",
     "liveLink": "",
     "image": "/projects/isol.png",
-    "featured": true
-  },
-  {
-    "id": "techtalkswithomee",
-    "title": "TechTalksWithOmee - Blog",
-    "stack": ["Next.js",  "TypeScript", "TailwindCSS"],
-    "description": "Modern blog platform built with Next.js and Sanity CMS, featuring markdown support, SEO optimization, and responsive design. A space for sharing technical insights and tutorials.",
-    "link": "https://github.com/omprakashkadur/techtalkswithomee",
-    "liveLink": "https://techtalkswithomee.com",
-    "image": "/projects/techtalks.png",
-    "featured": true
+    "featured": false
   }
 ]

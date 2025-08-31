@@ -8,7 +8,7 @@
     "TailwindCSS 4",
     "Lucide React"
   ],
-  "description": "Spoken Flow is a personal English learning and speaking practice app. It helps users improve fluency through categorized practice modules like public speaking, interviews, meetings, office conversations, and daily use. All learning data is stored in JSON files, ensuring simplicity and scalability. Features include auto-scrolling sentences with adjustable speed and font size, vocabulary flashcards, full-length conversations, and an integrated recording panel for speaking practice with preview, download, and discard options. Progress is tracked locally with marked items and pagination support.",
+  "description": "Spoken Flow is a personal English learning app that helps users improve fluency through modules like public speaking, interviews, meetings, and daily use. It uses JSON-based data for simplicity, with features like auto-scrolling sentences, vocabulary flashcards, full-length conversations, and a recording panel with preview, download, and discard. Progress is tracked locally with marked items and pagination.",
   "link": "https://github.com/OmprakashKadur/spoken-flow",
   "liveLink": "https://spoken-flow.vercel.app/",
   "image": "/projects/spokenflow.png",

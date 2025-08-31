@@ -38,7 +38,7 @@
     "stack": ["React", "TypeScript", "GitHub API", "TailwindCSS"],
     "description": "A powerful GitHub profile finder that allows users to search and explore developer profiles by username, skills, and activity. Features include profile analytics, repository insights, and contribution tracking.",
     "link": "https://github.com/omprakashkadur/devlens",
-    "liveLink": "https://devlense.vercel.app",
+    "liveLink": "",
     "image": "/projects/devlense.png",
     "featured": true
   },
